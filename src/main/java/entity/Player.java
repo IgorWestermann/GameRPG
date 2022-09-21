@@ -28,40 +28,33 @@ public class Player extends Entity {
 
     public void load() {
         try {
-            up1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/up/up_0.png"));
-            up2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/up/up_1.png"));
-            up3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/up/up_2.png"));
-            up4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/up/up_3.png"));
-            up_idle = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/up_idle/idle_up.png"));
-            up_attack = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/up_attack/attack_up.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/up/up_0.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/up/up_1.png"));
+            up3 = ImageIO.read(getClass().getResourceAsStream("/player/up/up_2.png"));
+            up4 = ImageIO.read(getClass().getResourceAsStream("/player/up/up_3.png"));
+            up_idle = ImageIO.read(getClass().getResourceAsStream("/player/up_idle/idle_up.png"));
+            up_attack = ImageIO.read(getClass().getResourceAsStream("/player/up_attack/attack_up.png"));
 
-            down1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/down/down_0.png"));
-            down2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/down/down_1.png"));
-            down3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/down/down_2.png"));
-            down4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/down/down_3.png"));
-            down_idle = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/down_idle/idle_down.png"));
-            down_attack = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/down_attack/attack_down.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/down/down_0.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/down/down_1.png"));
+            down3 = ImageIO.read(getClass().getResourceAsStream("/player/down/down_2.png"));
+            down4 = ImageIO.read(getClass().getResourceAsStream("/player/down/down_3.png"));
+            down_idle = ImageIO.read(getClass().getResourceAsStream("/player/down_idle/idle_down.png"));
+            down_attack = ImageIO.read(getClass().getResourceAsStream("/player/down_attack/attack_down.png"));
 
-            left1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/left/left_0.png"));
-            left2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/left/left_1.png"));
-            left3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/left/left_2.png"));
-            left4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/left/left_3.png"));
-            left_idle = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/left_idle/idle_left.png"));
-            left_attack = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/left_attack/attack_left.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/left/left_0.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/left/left_1.png"));
+            left3 = ImageIO.read(getClass().getResourceAsStream("/player/left/left_2.png"));
+            left4 = ImageIO.read(getClass().getResourceAsStream("/player/left/left_3.png"));
+            left_idle = ImageIO.read(getClass().getResourceAsStream("/player/left_idle/idle_left.png"));
+            left_attack = ImageIO.read(getClass().getResourceAsStream("/player/left_attack/attack_left.png"));
 
-            right1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/right/right_0.png"));
-            right2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/right/right_1.png"));
-            right3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/right/right_2.png"));
-            right4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/right/right_3.png"));
-            right_idle = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/right_idle/idle_right.png"));
-            right_attack = ImageIO
-                    .read(getClass().getClassLoader().getResourceAsStream("player/right_attack/attack_right.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/right/right_0.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/right/right_1.png"));
+            right3 = ImageIO.read(getClass().getResourceAsStream("/player/right/right_2.png"));
+            right4 = ImageIO.read(getClass().getResourceAsStream("/player/right/right_3.png"));
+            right_idle = ImageIO.read(getClass().getResourceAsStream("/player/right_idle/idle_right.png"));
+            right_attack = ImageIO.read(getClass().getResourceAsStream("/player/right_attack/attack_right.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -89,7 +82,7 @@ public class Player extends Entity {
         }
 
         spriteCounter++;
-        if (spriteCounter > 10 && isIdle == false) {
+        if (spriteCounter > 12 && isIdle == false) {
             if (spriteNum == 1) {
                 spriteNum = 2;
             } else if (spriteNum == 2) {

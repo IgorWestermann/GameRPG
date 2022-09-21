@@ -13,6 +13,7 @@ public class Main {
         Game game = new Game();
         screen.add(game);
 
+
         screen.pack();
 
         screen.setLocationRelativeTo(null);

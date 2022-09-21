@@ -1,20 +1,28 @@
 package main;
 
 import entity.Player;
+import tile.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
 
 
 public class Game extends JPanel implements Runnable{
-    public final int TILESIZE = 64;
-    final int WIDTH = 1280;
-    final int HEIGHT = 720;
+    public final int TILESIZE = 48;
+    public final int WIDTH = 768; //768
+    public final int HEIGHT = 576; // 576
+    public final int ROW = 12;
+    public final int COL = 16;
     final int ticks = 60;
 
+
+    TileManager tileM = new TileManager(this);
     Input key = new Input();
 
     Player player = new Player(this, key);
+
+
+
 
     Thread fps;
 
@@ -26,7 +34,10 @@ public class Game extends JPanel implements Runnable{
         this.addKeyListener(key);
         this.setFocusable(true);
 
+
+
     }
+
 
     public void start() {
         fps = new Thread(this);
@@ -39,10 +50,13 @@ public class Game extends JPanel implements Runnable{
 
     public void paint(Graphics g) {
         super.paint(g);
+        Graphics2D graphics = (Graphics2D) g;
+        tileM.paint(graphics);
+        player.paint(graphics);
 
-        Graphics2D graphic = (Graphics2D) g;
-        player.paint(graphic);
-        graphic.dispose();
+
+        g.dispose();
+
     }
 
     @Override
