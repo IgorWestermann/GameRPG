@@ -3,7 +3,7 @@ package entity;
 import java.awt.image.BufferedImage;
 
 public class Entity {
-    public int x, y, speed;
+    public int worldX, worldY, speed;
     public boolean isIdle;
 
     public BufferedImage up1, up2, up3, up4, up_idle, up_attack;

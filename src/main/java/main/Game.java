@@ -8,6 +8,7 @@ import java.awt.*;
 
 
 public class Game extends JPanel implements Runnable{
+    // Screen settings
     public final int TILESIZE = 48;
     public final int WIDTH = 768; //768
     public final int HEIGHT = 576; // 576
@@ -15,11 +16,17 @@ public class Game extends JPanel implements Runnable{
     public final int COL = 16;
     final int ticks = 60;
 
+    // Map settings
+    public final int WORLD_COL = 50;
+    public final int WORLD_ROW = 50;
+    public final int WORLD_WIDTH = WORLD_COL * TILESIZE;
+    public final int WORLD_HEIGHT = WORLD_ROW * TILESIZE;
+
 
     TileManager tileM = new TileManager(this);
     Input key = new Input();
 
-    Player player = new Player(this, key);
+    public Player player = new Player(this, key);
 
 
 
